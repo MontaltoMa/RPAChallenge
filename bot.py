@@ -10,7 +10,7 @@ import pandas as pd
 #import for Selenium Driver
 from selenium.webdriver.common.by import By
 
-# Disable errors if we are not connected to Maestro
+#Disable errors if we are not connected to Maestro
 BotMaestroSDK.RAISE_NOT_CONNECTED = False
 
 
