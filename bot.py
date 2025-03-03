@@ -4,9 +4,6 @@ from botcity.web import WebBot, Browser, By
 # Import for integration with BotCity Maestro SDK
 from botcity.maestro import *
 
-#Import for Clickium 
-from clicknium import clicknium as cc, locator, ui
-
 #Import for Pandas
 import pandas as pd
 
@@ -115,14 +112,14 @@ def main():
     bot.stop_browser()
 
     # Uncomment to mark this task as finished on BotMaestro
-    # maestro.finish_task(
-    #     task_id=execution.task_id,
-    #     status=AutomationTaskFinishStatus.SUCCESS,
-    #     message="Task Finished OK.",
-    #     total_items=0,
-    #     processed_items=0,
-    #     failed_items=0
-    # )
+    maestro.finish_task(
+        task_id=execution.task_id,
+        status=AutomationTaskFinishStatus.SUCCESS,
+        message="Task Finished OK.",
+        total_items=0,
+        processed_items=0,
+        failed_items=0
+     )
 
 
 def not_found(label):
